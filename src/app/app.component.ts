@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {isArray} from 'lodash';
+import {ThemeService} from '../configs/theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,10 @@ import {isArray} from 'lodash';
 })
 export class AppComponent {
   title = 'portfolio';
+  constructor(private themeService: ThemeService) {
+  }
 
-
-  isDataArray(){
-    if(isArray([])){
-
-    }
+  changeTheme(){
+    this.themeService.toggleTheme();
   }
 }
