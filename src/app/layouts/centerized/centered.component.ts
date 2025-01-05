@@ -7,5 +7,6 @@ import {Component} from '@angular/core';
   styleUrl: './centered.component.scss'
 })
 export class CenteredComponent {
-
+  constructor() {
+  }
 }

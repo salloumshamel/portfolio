@@ -1,10 +1,11 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {ThemeService} from '../configs/theme/theme.service';
+import {ThemeService} from './services/theme.service';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarRow} from '@angular/material/toolbar';
+import {RouterOutlet} from '@angular/router';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [MatSlideToggleModule, MatButtonModule, MatToolbarRow]
+  imports: [MatSlideToggleModule, MatButtonModule, MatToolbarRow, RouterOutlet]
 })
 export class AppComponent implements AfterViewInit {
   title = 'portfolio';

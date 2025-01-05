@@ -4,6 +4,12 @@ import {Injectable} from '@angular/core';
   providedIn: 'root',
 })
 export class ThemeService {
+
+  constructor() {
+    const savedTheme = localStorage.getItem('theme') || 'goldenSands';
+    this.switchTheme(savedTheme);
+  }
+
   private darkThemeClass = 'dark';
 
   toggleTheme() {
@@ -24,4 +30,16 @@ export class ThemeService {
     }
   }
 
+  private currentTheme = 'goldenSands';
+
+
+  switchTheme(theme: string): void {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    this.currentTheme = theme;
+  }
+
+  getTheme(): string {
+    return this.currentTheme;
+  }
 }

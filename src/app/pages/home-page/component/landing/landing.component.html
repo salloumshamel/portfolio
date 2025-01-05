@@ -1,0 +1,29 @@
+<div class="w-full h-full bg-bg text-primary">
+  <div class="theme-switcher flex gap-4 p-4">
+    <button
+      class="bg-accent text-bg px-4 py-2 rounded"
+      (click)="changeTheme('goldenSands')"
+    >
+      Golden Sands
+    </button>
+    <button
+      class="bg-accent text-bg px-4 py-2 rounded"
+      (click)="changeTheme('midnightOcean')"
+    >
+      Midnight Ocean
+    </button>
+  </div>
+  <div class="p-4 bg-surface">
+    <h1 class="text-primary font-bold text-xl">Welcome to the themed app!</h1>
+    <p class="text-secondary">Enjoy the dynamic styles.</p>
+  </div>
+
+  <button (click)="changeLanguage('ar')">
+    arabic
+  </button>
+  <button (click)="changeLanguage('en')">
+    english
+  </button>
+
+  {{ 'hello'|translate }}
+</div>
