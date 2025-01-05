@@ -17,13 +17,11 @@
     <h1 class="text-primary font-bold text-xl">Welcome to the themed app!</h1>
     <p class="text-secondary">Enjoy the dynamic styles.</p>
   </div>
+  <mat-icon svgIcon="ps" class="!size-20"></mat-icon>
 
-  <button (click)="changeLanguage('ar')">
-    arabic
-  </button>
-  <button (click)="changeLanguage('en')">
-    english
-  </button>
-
-  {{ 'hello'|translate }}
+  <div class="random-icons">
+    @for (icon of icons; track icon) {
+      <mat-icon svgIcon="ps" class="ps-icon"></mat-icon>
+    }
+  </div>
 </div>
