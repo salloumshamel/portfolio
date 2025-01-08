@@ -1,9 +1,9 @@
 :root {
-  --primary: #242f40;
-  --secondary: #363636;
-  --accent: #cca43b;
-  --bg: #ffffff;
-  --surface: #e5e5e5;
+  --primary: #ffc300;
+  --secondary: #ffd60a;
+  --accent: #003566;
+  --bg: #000814;
+  --surface: #001d3d;
 }
 
 [data-theme='goldenSands'] {
@@ -14,7 +14,7 @@
   --surface: #e5e5e5;
 }
 
-[data-theme='midnightOcean'] {
+[data-theme='goldenSands'] {
   --primary: #ffc300;
   --secondary: #ffd60a;
   --accent: #003566;

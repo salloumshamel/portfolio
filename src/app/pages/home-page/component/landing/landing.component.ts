@@ -2,12 +2,11 @@ import {AfterViewInit, Component, ElementRef, HostListener, OnInit} from '@angul
 import {ThemeService} from '../../../../services/theme.service';
 import {CommonModule} from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
-import {MatIcon} from '@angular/material/icon';
 import {gsap} from 'gsap';
 
 @Component({
   selector: 'app-landing',
-  imports: [CommonModule, MatIcon],
+  imports: [CommonModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })

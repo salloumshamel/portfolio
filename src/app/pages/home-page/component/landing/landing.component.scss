@@ -1,28 +1,27 @@
-.theme-button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.theme-button.active {
-  background-color: var(--accent);
-  color: var(--bg);
-  font-weight: bold;
-}
-
-.random-icons {
-  position: absolute;
-  width: 100%;
+.landing {
   height: 100%;
-  pointer-events: none; /* Allow mouse events to pass through */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.ps-icon {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  pointer-events: none;
-  //z-index: 10; /* Ensure it's above other content */
+.left-section {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  background: red;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.full-name {
+  font-size: 42px;
+}
+
+
+.right-section {
+  width: 60%;
+  height: 100%;
+  background: blue;
 }

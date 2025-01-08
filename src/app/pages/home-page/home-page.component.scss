@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  overflow: auto !important;
+  width: 100%;
+}
+
+.first-section {
+  height: calc(100vh - 128px);
+}
+
+.second-section {
+  height: 100vh;
+}
+

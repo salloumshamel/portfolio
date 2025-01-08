@@ -1,0 +1,28 @@
+.full-screen {
+  @apply bg-bg;
+  height: 100vh;
+  width: 100%;
+}
+
+.tool-bar {
+  @apply flex w-full items-center justify-center;
+}
+
+.tool-bar-content {
+  @apply h-14 mx-10 my-9 text-secondary;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.out-let-body {
+  @apply mx-10;
+  min-height: calc(100vh - 128px);
+  overflow: auto !important;
+}
+
+.tab-container {
+  display: flex;
+  gap: 16px;
+}
