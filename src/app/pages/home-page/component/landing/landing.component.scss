@@ -10,20 +10,18 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  //background: red;
   align-items: start;
   justify-content: center;
   padding: 12px;
 }
 
 .full-name {
-  @apply text-accent;
   font-weight: 500;
   font-size: 82px;
 }
 
 .job-title {
-  @apply font-bold;
+  @apply font-bold text-accent;
   font-size: 26px;
 }
 
@@ -34,7 +32,6 @@
 .right-section {
   width: 60%;
   height: 100%;
-  //background: blue;
   display: flex;
   align-items: center;
   justify-content: center;

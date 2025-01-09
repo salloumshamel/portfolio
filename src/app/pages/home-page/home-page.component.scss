@@ -4,7 +4,6 @@
   //overflow: auto !important;
   width: 100%;
 }
-
 .first-section {
   height: calc(100vh - 128px);
 }
@@ -13,3 +12,11 @@
   height: 100vh;
 }
 
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lawngreen;
+}
+.box-red {
+  background-color: red;
+}

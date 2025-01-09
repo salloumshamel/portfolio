@@ -1,13 +1,18 @@
 <div class="landing">
-  <div class="left-section">
+  <div class="left-section gap-8">
     <div class="full-name">
       {{ "landing.full-name" |translate }}
     </div>
-    <div class="job-title">
-      {{ "landing.job-title" |translate }}
-    </div>
-    <div class="description">
-      {{ "landing.descriptions" |translate }}
+    <div class="flex flex-col gap-3">
+      <div class="job-title">
+        {{ "landing.job-title" |translate }}
+      </div>
+      <div class="description">
+        {{ "landing.descriptions" |translate }}
+      </div>
+      <div class="text-accent cursor-pointer">
+        {{ "landing.about-me" | translate }} ⬇️
+      </div>
     </div>
     </div>
   <div class="right-section">
@@ -21,6 +26,5 @@
 
       </div>
     </div>
-
   </div>
 </div>
