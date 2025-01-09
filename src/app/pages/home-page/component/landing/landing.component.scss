@@ -9,16 +9,27 @@
   width: 40%;
   height: 100%;
   display: flex;
-  background: red;
-  align-items: center;
+  flex-direction: column;
+  //background: red;
+  align-items: start;
   justify-content: center;
   padding: 12px;
 }
 
 .full-name {
-  font-size: 42px;
+  @apply text-accent;
+  font-weight: 500;
+  font-size: 82px;
 }
 
+.job-title {
+  @apply font-bold;
+  font-size: 26px;
+}
+
+.description {
+
+}
 
 .right-section {
   width: 60%;

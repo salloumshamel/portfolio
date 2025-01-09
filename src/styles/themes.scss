@@ -1,12 +1,4 @@
 :root {
-  --primary: #ffc300;
-  --secondary: #ffd60a;
-  --accent: #003566;
-  --bg: #000814;
-  --surface: #001d3d;
-}
-
-[data-theme='goldenSands'] {
   --primary: #242f40;
   --secondary: #363636;
   --accent: #cca43b;
@@ -14,7 +6,15 @@
   --surface: #e5e5e5;
 }
 
-[data-theme='goldenSands'] {
+[data-theme='light'] {
+  --primary: #242f40;
+  --secondary: #363636;
+  --accent: #cca43b;
+  --bg: #ffffff;
+  --surface: #e5e5e5;
+}
+
+[data-theme='dark'] {
   --primary: #ffc300;
   --secondary: #ffd60a;
   --accent: #003566;
