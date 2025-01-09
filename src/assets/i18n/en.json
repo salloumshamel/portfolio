@@ -1,3 +1,13 @@
 {
-  "hello": "hello"
+  "toolBar": {
+    "name": "shamel",
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio"
+  },
+  "landing": {
+    "full-name": "Shamel Salloum",
+    "job-title": "Front-end Engineer + Full-Stack Developer \uD83E\uDDD1\u200D\uD83D\uDCBB",
+    "descriptions": "I'm Software engineer specalize in angular front end development and have good knowladge in full-stack development"
+  }
 }

@@ -1,12 +1,12 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnInit} from '@angular/core';
 import {ThemeService} from '../../../../services/theme.service';
 import {CommonModule} from '@angular/common';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {gsap} from 'gsap';
 
 @Component({
   selector: 'app-landing',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })

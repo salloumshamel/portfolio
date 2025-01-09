@@ -13,13 +13,17 @@ export class LanguageService {
 
   initialize() {
     this.currentLanguage = localStorage.getItem('lang') || 'en';
-    document.dir = this.currentLanguage == 'en' ? 'ltr' : 'rtl';
     this.translateService.use(this.currentLanguage);
+    this.addDocumentAttributes(this.currentLanguage);
   }
 
   changeLanguage(lang: string) {
     localStorage.setItem("lang", lang);
     this.translateService.use(lang);
+    this.addDocumentAttributes(lang);
+  }
+
+  addDocumentAttributes(lang: string) {
     document.dir = lang == 'ar' ? 'rtl' : 'ltr';
   }
 }

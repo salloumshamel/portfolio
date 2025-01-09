@@ -5,12 +5,24 @@
 @font-face {
   font-family: 'League Spartan';
   src: url('/assets/fonts/LeagueSpartan-Bold.otf') format('opentype');
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 
-body {
+
+@font-face {
+  font-family: 'Kufi';
+  src: url('/assets/fonts/ReemKufi-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[dir='ltr'] body {
   font-family: 'League Spartan', sans-serif;
+}
+
+[dir='rtl'] body {
+  font-family: 'Kufi', sans-serif;
 }
 
 html, body {
