@@ -1,0 +1,10 @@
+<label class="language-toggle" title="Toggle Language">
+  <input
+    type="checkbox"
+    [checked]="currentLanguage === 'ar'"
+    (change)="toggleLanguage()"
+  />
+  <span class="language-toggle__label">
+    {{ currentLanguage === 'en' ? 'English' : 'العربية' }}
+  </span>
+</label>

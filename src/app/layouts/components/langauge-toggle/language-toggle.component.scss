@@ -1,0 +1,56 @@
+.language-toggle {
+  --language-toggle__icon--duration: 500ms;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-toggle input[type="checkbox"] {
+  display: none;
+}
+
+.language-toggle .language-toggle-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.language-toggle__icon {
+  transition: transform var(--language-toggle__icon--duration);
+}
+
+.language-toggle input[type="checkbox"]:checked ~ .language-toggle__icon {
+  transform: rotateY(180deg);
+}
+
+.language-toggle__text {
+  transition: opacity var(--language-toggle__icon--duration);
+}
+
+.language-toggle input[type="checkbox"]:checked
+~ .language-toggle__icon
+.language-toggle__text--arabic {
+  display: block;
+  opacity: 1;
+}
+
+.language-toggle input[type="checkbox"]:checked
+~ .language-toggle__icon
+.language-toggle__text--english {
+  display: none;
+  opacity: 0;
+}
+
+.language-toggle__text--arabic {
+  display: none;
+  opacity: 0;
+}

@@ -26,7 +26,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   changeTheme(theme: string): void {
-    this.themeService.switchTheme(theme);
+
   }
 
   ngAfterViewInit() {
