@@ -6,13 +6,13 @@
         {{ "toolBar.name" |translate }}
       </div>
       <div class="tab-container">
-        <div class="tool-bar-buttons">
+        <div class="tool-bar-buttons" (click)="onClickHome()">
           {{ "toolBar.home" |translate }}
         </div>
-        <div class="tool-bar-buttons">
+        <div class="tool-bar-buttons" (click)="onClickAbout()">
           {{ "toolBar.about" |translate }}
         </div>
-        <div class="tool-bar-buttons">
+        <div class="tool-bar-buttons" (click)="onClickPortfolio()">
           {{ "toolBar.portfolio" |translate }}
         </div>
         <div class="tool-bar-buttons">

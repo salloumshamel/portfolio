@@ -1,12 +1,11 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TranslatePipe} from '@ngx-translate/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin'
+import {LanguageService} from '../../../../services/language-service';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin);
 
 @Component({
   selector: 'app-landing',
@@ -15,10 +14,7 @@ gsap.registerPlugin(ScrollToPlugin);
   styleUrl: './landing.component.scss'
 })
 export class LandingComponent implements OnInit, AfterViewInit {
-  @ViewChild(ElementRef, {static: true}) name: ElementRef;
-
-  constructor() {
-
+  constructor(private languageService: LanguageService, private elementRef: ElementRef) {
   }
 
   ngOnInit(): void {
@@ -35,35 +31,44 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   gsapAnimation() {
     let timeline = gsap.timeline();
-    timeline.from('.right-section', {
-      xPercent: +100,
-      rotation: 0,
-      ease: 'power2'
-    }).from('#angular1', {
-      xPercent: -100,
-      yoyo: true,
-      repeat: -1,
-      duration: 10,
-    }).from('#angular2', {
-      xPercent: +100,
-      yoyo: true,
-      repeat: -1,
-      duration: 10,
-    }).from('#angular3', {
-      xPercent: -100,
-      yoyo: true,
-      repeat: -1,
-      duration: 10,
-    });
+
+    // Sequential animation chain
+    timeline
+      .from('.right-section', {
+        xPercent: this.getPercentageBasedOnLang(50),
+        rotation: 0,
+        ease: 'power2',
+        duration: 2,
+      })
+      .fromTo('#section2',
+        {opacity: 0, xPercent: -100},
+        {opacity: 1, ease: 'sine.in', xPercent: 0, duration: 3}
+      )
+      .to('#section1',
+        {opacity: 0, yPercent: -100, ease: 'power1.out', duration: 3},
+      );
+
+
     ScrollTrigger.create({
       trigger: ".landing",
       animation: timeline,
-      start: "top  128px",
-      end: "+=500",
-      pin: true,
-      // scrub: 1,
-      markers: true,
-    })
+      start: "top  256px",
+      end: "90% 20%",
+      pin: false,
+      pinSpacing: false,
+      scrub: 1,
+      // markers: true,
+      onLeave: () => console.log("Scroll event complete"),
+    });
+
+    timeline.eventCallback("onComplete", function () {
+      console.log("Animation sequence completed");
+    });
+  }
+
+  getPercentageBasedOnLang(value: number) {
+    const lang = this.languageService.currentLanguage;
+    return lang == 'ar' ? -value : value;
   }
 
 }

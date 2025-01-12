@@ -2,7 +2,8 @@ import {AfterViewInit, Component} from '@angular/core';
 import {LandingComponent} from './component/landing/landing.component';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import {AboutMeComponent} from './component/about-me/about-me.component';
+import {ProjectsComponent} from './component/projects/projects.component';
+import {ExperienceComponent} from './component/experince/experience.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
   selector: 'app-home-page',
   imports: [
     LandingComponent,
-    AboutMeComponent
+    ProjectsComponent,
+    ExperienceComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
@@ -21,9 +23,15 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-
+// Pin #section2 and allow #section3 to scroll over it
+//     ScrollTrigger.create({
+//       trigger: "#section2",
+//       start: "top top",
+//       end: "+=100%",
+//       pin: true,
+//       pinSpacing: false,
+//     });
   }
-
 }
 
 

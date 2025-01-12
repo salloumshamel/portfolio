@@ -9,9 +9,14 @@
 }
 
 .tool-bar-content {
-  @apply h-14 mx-10 my-9 text-secondary;
+  @apply h-14 text-secondary bg-bg;
+  position: fixed;
+  top: 0;
+  bottom: 36px;
+  left: 40px;
+  right: 40px;
   display: flex;
-  width: 100%;
+  z-index: 10;
   align-items: center;
   justify-content: space-between;
 }
@@ -28,8 +33,10 @@
 }
 
 .tool-bar-buttons {
+  @apply cursor-pointer;
   align-items: center;
   display: flex;
   justify-content: center;
   text-align: center;
 }
+

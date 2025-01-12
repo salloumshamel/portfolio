@@ -1,0 +1,10 @@
+.experience-container {
+  @apply bg-green-50;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

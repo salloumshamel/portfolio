@@ -9,6 +9,7 @@ export class LanguageService {
 
   constructor(private translateService: TranslateService) {
     this.initialize();
+    this.onLanguageChange();
   }
 
   initialize() {
@@ -25,5 +26,11 @@ export class LanguageService {
 
   addDocumentAttributes(lang: string) {
     document.dir = lang == 'ar' ? 'rtl' : 'ltr';
+  }
+
+  onLanguageChange() {
+    this.translateService.onLangChange.subscribe(lang => {
+      this.currentLanguage = lang.lang;
+    })
   }
 }
