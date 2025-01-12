@@ -27,22 +27,24 @@ export class ProjectsComponent implements AfterViewInit {
 
   }
 
-  clickProject(project) {
-    const state = Flip.getState(".selected-project, selected-project, .project, .projects, .show");
-    // Toggle visibility
-    const selected = document.querySelector(".selected-project");
-    const projectContainer = document.querySelector(".project-container");
-    const projects = document.querySelector(".projects");
-    selected.classList.toggle("show");
-    projectContainer.classList.toggle("show");
-    projects.classList.toggle("show");
-    // Animate the flip transition
+  clickProject(project: any) {
+    const state = Flip.getState(".selected-project, .project, .projects");
+
+    // Toggle visibility and layout classes
+    document.querySelector(".selected-project")?.classList.toggle("show");
+    document.querySelector(".project-container")?.classList.toggle("show");
+    document.querySelector(".projects")?.classList.toggle("show");
+
+    // Apply Flip animation for transitions
     Flip.from(state, {
-      absolute: false,
-      duration: 1,
+      absolute: true,
+      duration: 1.2,
+      ease: "power4.inOut",
       stagger: 0.1,
-      ease: "power4.inOut"
+      scale: true,
+      onComplete: () => {
+        console.log('Flip animation completed');
+      }
     });
   }
-
 }

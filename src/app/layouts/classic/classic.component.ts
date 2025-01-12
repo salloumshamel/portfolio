@@ -5,6 +5,7 @@ import {LanguageToggleComponent} from '../components/langauge-toggle/language-to
 import {TranslatePipe} from '@ngx-translate/core';
 import gsap from 'gsap';
 import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
+import {getSectionId, SectionsNames} from '../../pages/home-page/utils/sections-names';
 
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -24,15 +25,15 @@ export class ClassicComponent {
   }
 
   onClickHome() {
-    gsap.to(window, {duration: 2, scrollTo: "#section1"});
+    gsap.to(window, {scrollTo: getSectionId(SectionsNames.HOME)});
   }
 
   onClickPortfolio() {
-    gsap.to(window, {duration: 2, scrollTo: "#section2"});
+    gsap.to(window, {scrollTo: getSectionId(SectionsNames.PROJECTS)});
   }
 
   onClickAbout() {
-    gsap.to(window, {duration: 2, scrollTo: "#section3"});
+    gsap.to(window, {scrollTo: getSectionId(SectionsNames.EXPERIENCE)});
   }
 
   onClickExperience() {

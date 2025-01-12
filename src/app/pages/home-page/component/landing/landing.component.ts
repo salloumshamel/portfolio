@@ -30,40 +30,32 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
 
   gsapAnimation() {
-    let timeline = gsap.timeline();
-
-    // Sequential animation chain
-    timeline
-      .from('.right-section', {
-        xPercent: this.getPercentageBasedOnLang(50),
-        rotation: 0,
-        ease: 'power2',
-        duration: 2,
-      })
-      .fromTo('#section2',
-        {opacity: 0, xPercent: -100},
-        {opacity: 1, ease: 'sine.in', xPercent: 0, duration: 3}
-      )
-      .to('#section1',
-        {opacity: 0, yPercent: -100, ease: 'power1.out', duration: 3},
-      );
-
-
-    ScrollTrigger.create({
-      trigger: ".landing",
-      animation: timeline,
-      start: "top  256px",
-      end: "90% 20%",
-      pin: false,
-      pinSpacing: false,
-      scrub: 1,
-      // markers: true,
-      onLeave: () => console.log("Scroll event complete"),
-    });
-
-    timeline.eventCallback("onComplete", function () {
-      console.log("Animation sequence completed");
-    });
+    // let timeline = gsap.timeline();
+    //
+    // // Sequential animation chain
+    // timeline
+    //   .from('.right-section', {
+    //     xPercent: this.getPercentageBasedOnLang(50),
+    //     rotation: 0,
+    //     ease: 'power2',
+    //     duration: 2,
+    //   });
+    //
+    //
+    // ScrollTrigger.create({
+    //   trigger: ".landing",
+    //   animation: timeline,
+    //   start: "top  256px",
+    //   end: "90% 20%",
+    //   pin: false,
+    //   pinSpacing: false,
+    //   scrub: 1,
+    //   // markers: true,
+    //   onLeave: () => console.log("Scroll event complete"),
+    // });
+    //
+    // timeline.eventCallback("onComplete", function () {
+    // });
   }
 
   getPercentageBasedOnLang(value: number) {

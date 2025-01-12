@@ -4,6 +4,8 @@ import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {ProjectsComponent} from './component/projects/projects.component';
 import {ExperienceComponent} from './component/experince/experience.component';
+import {SectionsNames} from './utils/sections-names';
+import {SectionsAnimation} from './animations/sections-animations';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,15 +25,12 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-// Pin #section2 and allow #section3 to scroll over it
-//     ScrollTrigger.create({
-//       trigger: "#section2",
-//       start: "top top",
-//       end: "+=100%",
-//       pin: true,
-//       pinSpacing: false,
-//     });
+    SectionsAnimation.sectionsScrollTriggerBetweenLandingAndProjects();
+    // SectionsAnimation.sectionsScrollTriggerBetweenProjectsAndExperiences();
+    // SectionsAnimation.initSectionsScrollAnimations();
   }
+
+  protected readonly SectionsNames = SectionsNames;
 }
 
 
