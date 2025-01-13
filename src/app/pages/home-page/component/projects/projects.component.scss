@@ -1,15 +1,17 @@
+.project-section{
+  height: var(--height);
+  margin-top: var(--margin-top);
+  width: 100%;
+}
 .project-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  //gap: 32px;
-  //align-items: center;
 }
 
 .project-container.show {
   flex-direction: row;
   gap: 36px;
+  padding-bottom: 4%;
 }
 
 .projects {
@@ -17,14 +19,13 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  //align-items: center;
   overflow: hidden !important;
 }
 
 
 .project {
   @apply w-full bg-accent rounded-s;
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 

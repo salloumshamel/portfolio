@@ -4,6 +4,7 @@ import {TranslatePipe} from '@ngx-translate/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {LanguageService} from '../../../../services/language-service';
+import {LandingAnimations} from './animations/landing-animations';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,32 +31,8 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
 
   gsapAnimation() {
-    // let timeline = gsap.timeline();
-    //
-    // // Sequential animation chain
-    // timeline
-    //   .from('.right-section', {
-    //     xPercent: this.getPercentageBasedOnLang(50),
-    //     rotation: 0,
-    //     ease: 'power2',
-    //     duration: 2,
-    //   });
-    //
-    //
-    // ScrollTrigger.create({
-    //   trigger: ".landing",
-    //   animation: timeline,
-    //   start: "top  256px",
-    //   end: "90% 20%",
-    //   pin: false,
-    //   pinSpacing: false,
-    //   scrub: 1,
-    //   // markers: true,
-    //   onLeave: () => console.log("Scroll event complete"),
-    // });
-    //
-    // timeline.eventCallback("onComplete", function () {
-    // });
+    LandingAnimations.imageAnimation(50);
+    // LandingAnimations.leftSectionScroll();
   }
 
   getPercentageBasedOnLang(value: number) {

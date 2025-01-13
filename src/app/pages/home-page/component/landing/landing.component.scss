@@ -1,19 +1,18 @@
-.landing {
-  height: 100%;
-  width: 100%;
+.landing-section {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: var(--height);
+  max-height: var(--height);
+  margin-top: var(--margin-top);
+  width: 100%;
+  overflow: hidden !important;
 }
 
-
 .left-section {
-  width: 40%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: 12px;
+  width: 40%;
+  overflow: hidden !important;
 }
 
 .full-name {
@@ -26,8 +25,20 @@
   font-size: 26px;
 }
 
-.description {
+.hello {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
 
+.hello {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
 }
 
 .right-section {
@@ -41,21 +52,6 @@
 .personal-image-container {
   position: relative;
 }
-
-//.personal-image {
-//  background-image: url("/assets/images/person.png");
-//  top: 40%;
-//  left: 37%;
-//  position: absolute;
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//  height: 200px;
-//  width: 200px;
-//  animation-name: image-animation;
-//  animation-duration: 6s;
-//  animation-delay: -1s;
-//  //background: red;
-//}
 
 .personal-image-background {
   fill: var(--accent);
