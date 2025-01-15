@@ -26,6 +26,7 @@ export class HomePageComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     SectionsAnimation.sectionsScrollTriggerBetweenLandingAndProjects();
+    SectionsAnimation.testAnimation();
   }
 
   protected readonly SectionsNames = SectionsNames;
@@ -49,7 +50,7 @@ export class HomePageComponent implements AfterViewInit {
 //     pinSpacing: true,
 //     scrub: 4,
 //     toggleActions: "restart pause resume complete",
-//     markers: true,
+
 //     toggleClass: "red"
 //   }
 // });
@@ -58,7 +59,7 @@ export class HomePageComponent implements AfterViewInit {
 //     trigger: '.box',
 //     start: 'top 80%',
 //     end: 'top 50%',
-//     markers: true,
+
 //     toggleClass: {targets: ['body'], className: 'bg-red'},
 //   });
 
@@ -69,7 +70,7 @@ export class HomePageComponent implements AfterViewInit {
 //     start: 'top 80%',
 //     end: 'top 30%',
 //     scrub: 1,
-//     markers: true
+
 //   }
 // });
 // timeLine.to('.box', {x: 500, duration: 5}).to('.box', {y: 300, duration: 2}).to('.box', {x: 0, duration: 2})
@@ -85,7 +86,7 @@ export class HomePageComponent implements AfterViewInit {
 //     pinSpacing: false,
 //     scrub: 4,
 //     toggleActions: "restart pause resume complete",
-//     markers: true,
+
 //     toggleClass: "red"
 //   }
 // });

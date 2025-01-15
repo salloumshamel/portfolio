@@ -1,74 +1,49 @@
 .landing-section {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: var(--height);
-  max-height: var(--height);
+  height: 200vh;
   margin-top: var(--margin-top);
   width: 100%;
   overflow: hidden !important;
 }
 
-.left-section {
-  height: 100%;
-  width: 40%;
-  overflow: hidden !important;
+.left-container {
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about1 {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .full-name {
-  font-weight: 500;
-  font-size: 82px;
-}
-
-.job-title {
-  @apply font-bold text-accent;
-  font-size: 26px;
-}
-
-.hello {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
-
-.hello {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
+  font-size: 88px;
+  color: var(--accent);
 }
 
 .right-section {
-  width: 60%;
-  height: 100%;
+  height: 200vh;
+  width: 40%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
 }
 
-.personal-image-container {
-  position: relative;
-}
-
-.personal-image-background {
-  fill: var(--accent);
-  width: 800px;
-  height: 800px;
-}
-
-
-@keyframes image-animation {
-  0% {
-    opacity: 0;
-    top: 0;
-    left: 37%;
-  }
-
-  100% {
-    top: 40%;
-    left: 37%;
-  }
+.image-background {
+  height: 100vh;
 }

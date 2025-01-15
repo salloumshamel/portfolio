@@ -7,8 +7,12 @@
   },
   "landing": {
     "full-name": "Shamel Salloum",
-    "job-title": "Front-end Engineer + Full-Stack Developer \uD83E\uDDD1\u200D\uD83D\uDCBB",
-    "descriptions": "I'm Software engineer specalize in angular front end development and have good knowladge in full-stack development",
-    "scroll": "scroll"
+    "job-title": "Senior Front-end Engineer + Full-Stack Developer 💻",
+    "descriptions": "Passionate software engineer specializing in Angular front-end development, with advanced expertise in full-stack solutions.",
+    "scroll": "Explore More"
+  },
+  "experience": {
+    "title": "My Journey",
+    "summary": "From crafting sleek front-end experiences in Angular to mastering scalable backend architectures with Spring Boot and Express.js, I've built a robust toolkit as a full-stack developer. Previously, I delved into Flutter development and shared my knowledge as a programming instructor, guiding the next generation of developers."
   }
 }
