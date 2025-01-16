@@ -54,4 +54,14 @@
   background-color: var(--accent);
 }
 
+.project-section,
+.project-container,
+.projects,
+.project,
+.projects.show,
+.project.show,
+.selected-project,
+.selected-project.show {
+  @apply z-0;
+}
 

@@ -26,7 +26,7 @@ export class HomePageComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     SectionsAnimation.sectionsScrollTriggerBetweenLandingAndProjects();
-    SectionsAnimation.testAnimation();
+    // SectionsAnimation.testAnimation();
   }
 
   protected readonly SectionsNames = SectionsNames;
