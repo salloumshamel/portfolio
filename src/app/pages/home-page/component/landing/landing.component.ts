@@ -5,12 +5,13 @@ import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {LanguageService} from '../../../../services/language-service';
 import {LandingAnimations} from './animations/landing-animations';
+import {SkillsLineComponent} from './components/skills-line/skills-line.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-landing',
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, SkillsLineComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
