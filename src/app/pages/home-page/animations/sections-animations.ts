@@ -10,11 +10,11 @@ export class SectionsAnimation {
     ScrollTrigger.create({
       trigger: '#projects',
       pin: true,
-      start: 'top top',
+      start: '56px 56px',
       end: 'bottom top',
       pinSpacing: false,
-      immediateRender: false,
-      markers: true,
+      immediateRender: true,
+      // markers: true,
     })
   }
 

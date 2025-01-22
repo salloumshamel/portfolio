@@ -27,7 +27,7 @@ export class TestComponent implements AfterViewInit {
       end: '+=200%',
       pin: true,
       pinSpacing: false,
-      markers: true,
+      // markers: true,
     });
 
     // Animate the text mask effect

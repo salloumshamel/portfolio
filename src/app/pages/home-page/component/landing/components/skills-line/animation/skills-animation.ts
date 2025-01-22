@@ -17,7 +17,7 @@ export class SkillsAnimation {
         start: 'top 90%',
         end: 'bottom top',
         scrub: 4,
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -28,7 +28,7 @@ export class SkillsAnimation {
         start: 'top 90%',
         end: 'bottom top',
         scrub: 4,
-        markers: true,
+        // markers: true,
       },
     });
   }

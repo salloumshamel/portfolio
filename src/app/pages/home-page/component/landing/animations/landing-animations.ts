@@ -28,7 +28,7 @@ export class LandingAnimations {
         end: "+=20%",
         scrub: 2,
         immediateRender: false,
-        markers: true
+        // markers: true
       }
     });
 
@@ -39,7 +39,7 @@ export class LandingAnimations {
       pin: '.right-section',
       scrub: true,
       pinSpacing: false,
-      markers: true,
+      // markers: true,
       invalidateOnRefresh: true,
       immediateRender: false,
       pinReparent: true,

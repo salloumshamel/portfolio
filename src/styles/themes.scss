@@ -1,7 +1,7 @@
 :root {
   --primary: #242f40;
   --secondary: #363636;
-  --accent: #cca43b;
+  --accent: #7927dd;
   --bg: #ffffff;
   --surface: #e5e5e5;
 }
@@ -9,7 +9,7 @@
 [data-theme='light'] {
   --primary: #242f40;
   --secondary: #363636;
-  --accent: #cca43b;
+  --accent: #7927dd;
   --bg: #ffffff;
   --surface: #e5e5e5;
 }
@@ -17,7 +17,11 @@
 [data-theme='dark'] {
   --primary: #f5f5f5;
   --secondary: #dcdcdc;
-  --accent: #cca43b;
-  --bg: #121212;
+  --accent: #7927dd;
+  --bg: #031323;
   --surface: #1e1e1e;
 }
+
+//shaza color palette
+//#7927dd accent
+//#031323 background
